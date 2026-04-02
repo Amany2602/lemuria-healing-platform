@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="img1" src="/lemuria-assets/logo/nav-logo.png" onload="check(this, 'nav')" crossorigin="anonymous">
+<img id="img2" src="/lemuria-assets/logo/footer-logo.png" onload="check(this, 'footer')" crossorigin="anonymous">
+<canvas id="c"></canvas>
+<script>
+function check(img, name) {
+  let c = document.getElementById('c');
+  c.width = img.width; c.height = img.height;
+  let ctx = c.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  
+  // check a pixel well within the background
+  let p1 = ctx.getImageData(5, 5, 1, 1).data;
+  let p2 = ctx.getImageData(img.width-5, 5, 1, 1).data;
+  let p3 = ctx.getImageData(5, img.height-5, 1, 1).data;
+  
+  let toHex = (p) => "#" + ("0" + p[0].toString(16)).slice(-2) + ("0" + p[1].toString(16)).slice(-2) + ("0" + p[2].toString(16)).slice(-2);
+  
+  console.log(name + ' TOP LEFT hex: ' + toHex(p1));
+  console.log(name + ' TOP RIGHT hex: ' + toHex(p2));
+  console.log(name + ' BOTTOM LEFT hex: ' + toHex(p3));
+}
+</script>
+</body>
+</html>
