@@ -1,17 +1,16 @@
-# lemuria-healing-platform
+# Lemuria Healing Platform
 Lemuria Healing Platform — a full-stack, production-ready web application featuring secure bookings, Stripe payment integration, automated email workflows, and optimized performance. Built with Next.js, Supabase, and modern DevOps practices.
-# 🌿 Lemuria Healing Platform
 
 A production-ready full-stack healing services platform with secure booking, Stripe payments, and automated email notifications.
 
 ---
 
-## 🚀 Live Demo
-🔗 https://your-vercel-link.vercel.app
+#Live Demo
+🔗 lemuria-healing-platform.vercel.app
 
 ---
 
-## ✨ Features
+#Features
 
 - 🧘 Service & workshop booking system  
 - 💳 Secure payments via Stripe  
@@ -33,6 +32,3 @@ A production-ready full-stack healing services platform with secure booking, Str
 
 ---
 
-## ⚙️ Environment Variables
-
-Create a `.env` file and add:
